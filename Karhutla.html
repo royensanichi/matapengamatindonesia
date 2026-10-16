@@ -559,7 +559,22 @@ body.governor-modal-open{overflow:hidden}
 #mp-photo-lightbox .mp-photo-close{position:absolute;right:20px;top:14px;border:1px solid #777;border-radius:999px;background:#252525;color:#fff;font-size:25px;width:42px;height:42px;cursor:pointer}
 #mp-photo-lightbox .mp-photo-hint{position:absolute;bottom:4px;color:#ccc;font-size:12px}
 @media(max-width:740px){.governor-statement-list{grid-template-columns:1fr!important}.governor-portrait{aspect-ratio:auto!important;max-height:none!important}.governor-statement-card{padding:14px!important}}
-</style><style id="trakteer-support-styles">.trakteer-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid rgba(255,96,104,.55);border-radius:999px;background:linear-gradient(135deg,#e93445,#a91d36);color:#fff!important;font-size:13px;font-weight:800;letter-spacing:.01em;text-decoration:none!important;box-shadow:0 7px 22px rgba(201,31,58,.2);transition:transform .2s,filter .2s,box-shadow .2s}.trakteer-link:hover{transform:translateY(-2px);filter:brightness(1.13);box-shadow:0 12px 26px rgba(201,31,58,.35)}.trakteer-support-box{margin:24px 0;padding:22px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.045)}.trakteer-support-box h3{margin:0 0 8px;font-size:20px}.trakteer-support-box p{margin:0 0 16px;line-height:1.6;opacity:.85}.trakteer-landing{position:fixed;z-index:30;left:50%;bottom:clamp(16px,4vh,42px);transform:translateX(-50%);white-space:nowrap}.trakteer-landing:hover{transform:translateX(-50%) translateY(-2px)}@media(max-width:650px){.trakteer-landing{bottom:18px;font-size:12px;padding:11px 15px}.trakteer-support-box{padding:17px}}</style></head>
+</style><style id="trakteer-support-styles">.trakteer-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid rgba(255,96,104,.55);border-radius:999px;background:linear-gradient(135deg,#e93445,#a91d36);color:#fff!important;font-size:13px;font-weight:800;letter-spacing:.01em;text-decoration:none!important;box-shadow:0 7px 22px rgba(201,31,58,.2);transition:transform .2s,filter .2s,box-shadow .2s}.trakteer-link:hover{transform:translateY(-2px);filter:brightness(1.13);box-shadow:0 12px 26px rgba(201,31,58,.35)}.trakteer-support-box{margin:24px 0;padding:22px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.045)}.trakteer-support-box h3{margin:0 0 8px;font-size:20px}.trakteer-support-box p{margin:0 0 16px;line-height:1.6;opacity:.85}.trakteer-landing{position:fixed;z-index:30;left:50%;bottom:clamp(16px,4vh,42px);transform:translateX(-50%);white-space:nowrap}.trakteer-landing:hover{transform:translateX(-50%) translateY(-2px)}@media(max-width:650px){.trakteer-landing{bottom:18px;font-size:12px;padding:11px 15px}.trakteer-support-box{padding:17px}}</style><style id="mp-motion-2026">
+/* Ikon dukungan di sisi menu Tentang Kami */
+.mp-coffee-cup{display:inline-block;margin-left:7px;font-size:20px;line-height:1;transform-origin:50% 80%;animation:mpCoffeeWiggle 2.2s ease-in-out infinite;vertical-align:middle;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2));pointer-events:none}
+@keyframes mpCoffeeWiggle{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+/* Foto 70% transparan di belakang isi section, tanpa mengurangi opacity teks */
+.latest-updates.panel{position:relative;isolation:isolate;overflow:hidden}
+.latest-updates.panel::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Makan_Bergizi_Gratis_3.jpg?width=1400");background-size:cover;background-position:center;opacity:.7;pointer-events:none}
+.latest-updates.panel::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,rgba(10,15,25,.86),rgba(12,18,28,.7));pointer-events:none}
+/* Typewriter headline beranda */
+.mp-typewriter-text{display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;vertical-align:bottom;border-right:3px solid currentColor;animation:mpTyping 2.2s steps(30,end) both,mpCaret .75s step-end infinite}
+.mp-typewriter-second{animation-delay:2.3s,2.3s;width:0}
+@keyframes mpTyping{from{width:0}to{width:100%}}
+@keyframes mpCaret{50%{border-color:transparent}}
+@media(max-width:600px){.mp-typewriter-text{font-size:clamp(25px,7vw,48px)}.mp-coffee-cup{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.mp-coffee-cup,.mp-typewriter-text{animation:none!important}.mp-typewriter-text{width:auto;border:0}}
+</style></head>
 <body>
 <header class="nav-shell" id="navShell">
 <div class="container">
@@ -575,7 +590,7 @@ body.governor-modal-open{overflow:hidden}
 <button data-page-link="berita">Berita</button>
 <button data-page-link="pemerintah">Respon Pemerintah</button>
 <button data-page-link="negara">Respon Negara Lain</button>
-<button data-page-link="tentang">Tentang Kami + Trakteer</button>
+<button data-page-link="tentang">Tentang Kami + Trakteer <span class="mp-coffee-cup" aria-hidden="true">☕</span></button>
 </div>
 </nav>
 </div>
