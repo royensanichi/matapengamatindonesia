@@ -59,7 +59,7 @@
     }
     .portal--karhutla .portal__title { font-size: clamp(44px, 5.55vw, 90px); }
     .portal__title span { display: block; }
-    .portal__year { display: inline-block!important; color: rgba(255,255,255,.96); }
+    .portal__year { display: inline-block!important; color: rgba(255,255,255,.96); font-size: .52em; letter-spacing: -.035em; white-space: nowrap; }
     .portal__desc { max-width: 365px; margin: 23px 0 32px; font-size: clamp(14px,1.18vw,17px); line-height: 1.8; font-weight: 500; color: rgba(255,255,255,.8); text-wrap: balance; }
     .portal__action {
       display: inline-flex; gap: 14px; align-items: center; justify-content: center;
@@ -163,7 +163,7 @@
     @keyframes landingFullFade { 0% { opacity:0; filter:brightness(.38); } 100% { opacity:1; filter:brightness(1); } }
     @media(prefers-reduced-motion:reduce){html.landing-enter .app{animation:none!important}}
   </style>
-</head>
+<style id="trakteer-support-styles">.trakteer-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid rgba(255,96,104,.55);border-radius:999px;background:linear-gradient(135deg,#e93445,#a91d36);color:#fff!important;font-size:13px;font-weight:800;letter-spacing:.01em;text-decoration:none!important;box-shadow:0 7px 22px rgba(201,31,58,.2);transition:transform .2s,filter .2s,box-shadow .2s}.trakteer-link:hover{transform:translateY(-2px);filter:brightness(1.13);box-shadow:0 12px 26px rgba(201,31,58,.35)}.trakteer-support-box{margin:24px 0;padding:22px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.045)}.trakteer-support-box h3{margin:0 0 8px;font-size:20px}.trakteer-support-box p{margin:0 0 16px;line-height:1.6;opacity:.85}.trakteer-landing{position:fixed;z-index:30;left:50%;bottom:clamp(16px,4vh,42px);transform:translateX(-50%);white-space:nowrap}.trakteer-landing:hover{transform:translateX(-50%) translateY(-2px)}@media(max-width:650px){.trakteer-landing{bottom:18px;font-size:12px;padding:11px 15px}.trakteer-support-box{padding:17px}}</style></head>
 <body>
   <main class="app">
     <header class="brand" aria-label="MataPengamat">
@@ -200,7 +200,7 @@
         <span class="portal__content">
           <span class="portal__index">02 / Isu Lingkungan</span>
           <span class="portal__accent" aria-hidden="true"></span>
-          <span class="portal__title">Karhutla<br><span class="portal__year">2026</span></span>
+          <span class="portal__title">Karhutla<br><span class="portal__year">2026: Kalimantan</span></span>
           <span class="portal__desc">Memantau kebakaran hutan dan lahan di Kalimantan, dampaknya, dan respons berbagai pihak.</span>
           <span class="portal__action">Eksplorasi Karhutla <span class="portal__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
         </span>
@@ -239,5 +239,6 @@
       });
     });
   </script>
+<a class="trakteer-link trakteer-landing" href="https://trakteer.id/matapengamat/tip" target="_blank" rel="noopener noreferrer" aria-label="Dukung MataPengamat melalui Trakteer">♥ Dukung Kami via Trakteer ↗</a>
 </body>
 </html>
